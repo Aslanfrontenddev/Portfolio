@@ -1,0 +1,235 @@
+body {
+  background: #1f1f21;
+  overflow-x: hidden;
+}
+
+body.block {
+  overflow-y: hidden;
+}
+
+@keyframes header {
+  0% {
+    transform: translateY(-100%);
+    transition: 0.4s;
+  }
+  100% {
+    transform: translateY(0);
+    transition: 0.4s;
+  }
+}
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background: #1f1f21;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  transition: all ease 0.5s;
+  animation-name: header;
+  animation-duration: 2s;
+  transition: 0.4s;
+}
+body header .logo {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  padding-left: 15%;
+}
+body header .logo span {
+  color: #ffae00;
+}
+body header .navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 15%;
+}
+body header .navbar li a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all ease 0.5s;
+}
+body header .navbar li a:hover {
+  color: #ffae00;
+  transition: all ease 0.5s;
+}
+body header .navbar li a.active {
+  color: #ffae00;
+}
+body header .burger__btn {
+  display: none;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  padding-right: 15%;
+}
+body header .burger__btn .burger {
+  position: relative;
+  left: 28%;
+  top: 50%;
+  display: block;
+}
+body header .burger__btn .burger span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #ffae00;
+  transition: 0.4s ease;
+}
+body header .burger__btn .burger span:first-child {
+  top: 10px;
+}
+body header .burger__btn .burger span:last-child {
+  top: -10px;
+}
+
+@keyframes bg {
+  0% {
+    transform: translateX(200%);
+    transition: 0.7s;
+  }
+  100% {
+    transform: translateX(100);
+    transition: 0.7s;
+  }
+}
+@keyframes text {
+  0% {
+    transform: translateX(-200%);
+    transition: 2s;
+  }
+  100% {
+    transform: translateX(100);
+    transition: 2s;
+  }
+}
+.home {
+  height: 100vh;
+  padding: 30% 15%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.home .home__img {
+  width: 830px;
+  height: 830px;
+  transition: 2s;
+}
+.home .home__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  animation-name: bg;
+  animation-duration: 2s;
+  transition: 0.4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.home .home__text {
+  padding-bottom: 50px;
+  animation-name: text;
+  animation-duration: 2s;
+  transition: 0.2s;
+}
+.home .home__text span {
+  padding: 10px 25px;
+  box-shadow: 0px 10px 30px #ffae00;
+  border: 1px solid #3b3b3b;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.home .home__text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 7rem;
+  flex-shrink: 0;
+  color: #ffae00;
+}
+.home .home__text p {
+  font-size: 1.1rem;
+  color: #c3c3c3;
+  line-height: 30px;
+  -webkit-mask-box-image: 50px;
+          mask-border: 50px;
+}
+.home .home__text .main__btn {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+.home .home__text .main__btn .btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #ffae00;
+  border: 2px solid #ffae00;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.4s all ease;
+}
+.home .home__text .main__btn .btn:hover {
+  background: transparent;
+  color: #ffae00;
+  transition: 0.4s all ease;
+  transform: translateY(-7px);
+}
+.home .home__text .main__btn .two {
+  background-color: #141414;
+  border: 2px solid #141414;
+  color: #fff;
+}
+.home .home__text .main__btn .two:hover {
+  background-color: #fff;
+  color: #141414;
+  border: 2px solid #fff;
+}
+.home .home__text .share {
+  margin-top: 40px;
+}
+.home .home__text .share p {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+.home .home__text .share .social__icons {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+.home .home__text .share .social__icons a i {
+  color: #ffae00;
+  background-color: #141414;
+  border-radius: 50%;
+  text-align: center;
+  padding: 3px;
+  transition: 0.4s;
+  transform: scale(2.5);
+}
+.home .home__text .share .social__icons a:hover > i {
+  background-color: #ffae00;
+  color: #141414;
+}/*# sourceMappingURL=style.css.map */
